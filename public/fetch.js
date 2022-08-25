@@ -1,6 +1,6 @@
 let users = [];
 const uContainer = document.querySelector("#users");
-fetch("http://localhost:6969/users")
+fetch("https://capstone-fin.herokuapp.com/users")
   .then((res) => res.json())
   .then((data) => {
     users = data;
@@ -33,7 +33,7 @@ function showusers(users) {
 
 let products = [];
 const pContainer = document.querySelector("#products");
-fetch("http://localhost:6969/products")
+fetch("https://capstone-fin.herokuapp.com/products")
   .then((res) => res.json())
   .then((data) => {
     products = data;
@@ -55,7 +55,7 @@ function showproducts(products) {
 <td>${product.descriptions}</td>
 <td>${product.thumbnail}</td>
 <td>${product.image}</td>
-<td>${product.category}</td>
+<td >${product.category}</td>
 <td>${product.create_date}</td> 
 <td>${product.stock}</td>
   `;
