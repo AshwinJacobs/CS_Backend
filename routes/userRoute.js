@@ -109,11 +109,9 @@ router.post("/register", (req, res) => {
       billing_address,
       default_shipping_address,
     } = req.body;
-
     // The start of hashing / encryption
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt);
-
     let user = {
       full_name,
       email,
@@ -134,7 +132,6 @@ router.post("/register", (req, res) => {
     console.log(error);
   }
 });
-
 // Login
 // The Route where Decryption happens
 
