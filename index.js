@@ -15,13 +15,15 @@ app.set("port", process.env.PORT || 6969); // Set the port
 app.use(express.json()); // Enable the server to handle JSON requests
 app.use(cors()); // Dont let local development give errors
 app.use(express.static("public"));
-app.use(cors({
-  origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
-  credentials: true
-}));
-// credentials will allow you to access the cookie on your fetch(url, 
+app.use(
+  cors({
+    origin: ["http://127.0.0.1:8080", "http://localhost:8080"],
+    credentials: true,
+  })
+);
+// credentials will allow you to access the cookie on your fetch(url,
 {
-credentials: 'include'
+  credentials: "include";
 }
 // This is where we check URLs and Request methods to create functionality
 // GET '/' is always what will be displayed on the home page of your application

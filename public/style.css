@@ -1,336 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 html {
-  overflow-x: hidden;
-}
-/* TABLE FOR USERS AND PRODUCTS */
-body {
-  background: linear-gradient(#0e86ff, #0c0062);
-}
-.table-container {
-  padding: 10px;
-}
-table {
-  background-color: #ffffff;
-  font-family: "Roboto";
-  font-size: 18px;
-  margin: 8px 100px 80px 16px;
-  width: 100%;
-  border-collapse: collapse;
-}
-tr:hover {
-  background-color: #eaeaea;
-}
-label {
-  font-family: Roboto;
-  font-size: 32px;
-  font-weight: bold;
-  padding: 100px 16px;
-  color: #ffffff;
-}
-th,
-td {
-  border: 1px solid #eaeaea;
-  vertical-align: top;
-  text-align: left;
-  padding: 8px 12px;
-}
-th {
-  border-bottom: 1px solid #bcbcbc;
-  background-color: #f4f4f4;
-}
-thead > tr > :nth-child(1),
-tbody > tr > :nth-child(1) {
-  border-right: 1px solid #bcbcbc;
-  vertical-align: center;
-  text-align: center;
-  width: 32px;
-  padding: 0px;
-}
-/* END OF TABLE */
-
-/* NAVBAR */
-body {
-  background-color: black;
-}
-#navigationBar {
-  background: none;
-  height: auto;
-  text-align: right;
-  width: 100%;
-}
-#navigationBar > ul > li {
-  display: inline;
-}
-#navigationBar > ul > li > a {
-  color: #fff;
-  padding: 0px 15px;
-  text-decoration: none;
-  transition: color 0.3s ease-in;
-}
-#navigationBar > ul > li > a:hover {
-  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
-  border-radius: 15px;
-}
-/* end of navbar */
-/* LANDING PAGE */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
-
-:root {
-  --primary-color: #3a4052;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.5;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #20262e;
+  background-color: #28b1de;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-color);
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 5%;
 }
 
 h1 {
-  font-weight: 300;
-  font-size: 60px;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.showcase {
-  height: 97vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  color: #fff;
-  padding: 0 20px;
-}
-
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: var(--primary-color)
-    url("./https://traversymedia.com/downloads/cover.jpg") no-repeat center
-    center/cover;
-}
-
-.video-container video {
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.video-container:after {
-  content: "";
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-}
-
-.content {
-  z-index: 2;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 30px;
-  background: var(--primary-color);
-  color: #fff;
-  border-radius: 5px;
-  border: solid #fff 1px;
-  margin-top: 25px;
-  opacity: 0.7;
-}
-
-.btn:hover {
-  transform: scale(0.98);
-}
-/* END OF LANDING PAGE */
-
-/* login form */
-html {
-  height: 100%;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
-}
-
-.login-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.login-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-}
-
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
+  line-height: 1.375;
+  margin: 0 0 2.4rem 0;
+  letter-spacing: 1px;
 }
 
-.login-box a:hover {
-  background: #03e9f4;
+h2 {
+  text-align: right;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 1.375;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  min-width: 300px;
+  margin-bottom: 2.4rem;
+  background-color: #20262e;
   color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
+  overflow: hidden;
 }
 
-.login-box a span {
-  position: absolute;
+table tr:nth-child(even) {
+  background-color: rgb(46, 53, 62);
+}
+
+table th,
+table td:before {
+  color: #28b1de;
+}
+
+table th {
+  display: none;
+}
+
+table th,
+table td {
+  margin: 0.5rem 2rem;
+  text-align: left;
+}
+
+table td {
   display: block;
+  font-size: 90%;
 }
 
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
+table td:first-child {
+  padding-top: 1rem;
+}
+
+table td:last-child {
+  padding-bottom: 1rem;
+}
+
+table td:before {
+  content: attr(data-th) ":\00a0";
+  font-weight: bold;
+  min-width: 8rem;
+  display: inline-block;
+}
+
+.table-2 table td:before {
+  min-width: 0;
+}
+
+.table-3 table {
+  background-color: rgb(46, 53, 62);
+}
+
+.table-3 table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.table-3 table td:before {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
+  font-weight: normal;
+  opacity: 0.8;
 }
 
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
+.table-3 table td {
+  margin: 0;
+  padding: 1.5rem 2rem 0 2rem;
+  font-weight: bold;
 }
 
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: 0.25s;
+.table-3 table tr td:first-child {
+  background-color: #20262e;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
+.table-3 table tr td:last-child {
+  padding-bottom: 1.5rem;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
 }
 
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: 0.5s;
+.table-3 table tr:last-child td:last-child {
+  border-bottom: none;
 }
 
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
+@media (min-width: 600px) {
+  table td:before {
+    display: none;
   }
-  50%,
-  100% {
-    right: 100%;
+  table th,
+  table td {
+    display: table-cell;
   }
-}
-
-.login-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: 0.75s;
-}
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
+  table th,
+  table td,
+  table td:first-child,
+  table td:last-child {
+    padding: 1.5rem 2rem;
   }
-  50%,
-  100% {
-    bottom: 100%;
+  .table-3 table {
+    background-color: #20262e;
+  }
+  .table-3 table tr:nth-child(even) {
+    background-color: rgb(46, 53, 62);
+  }
+  .table-3 table td {
+    margin: 0.5rem 2rem;
+    padding: 1.5rem 2rem;
+    font-weight: normal;
+  }
+  .table-3 table tr td:first-child {
+    background-color: transparent;
+  }
+  .table-3 table tr td:last-child {
+    border-bottom: none;
   }
 }
