@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -12,34 +12,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-<nav id="navigationBar">
-  <ul>
-    <li>
-      <a href="./landing.html" class="link">HOME</a>
-    </li>
-    
-  </ul>
-</nav>
-  <body>
-    <div>
-        <table id="users">
-		<label>Users 
-		<thead >
+<div class="container">
+  <h1>API End-Points</h1>
+  <div class="table-1">
+   
+    <table>
+      <tbody>
         <tr>
-				<th>User</th>
-				<th>Full Name</th>
-				<th>Email</th>
-				<th>Password</th>
-				<th>Phone</th>
-				<th>Billing Address</th>
-
-			</tr>
-		</thead>
-
-	</table>
-
-    </div>
-<table id="products"><label>products</label></table>
+          <th>Root/Home :</th>
+        </tr>
+        <tr>
+          <td data-th="">GET /</td>
+          
+      
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-2">
+    <table>
+      <tbody>
+        <tr>
+          <th>Users :</th>
+          
+        </tr>
+        <tr>
+          <td data-th="">GET</td>
+          <td data-th="">/users</td>
+          
+        </tr>
+        <tr>
+          <td data-th="">GET</td>
+          <td data-th="">/users/:id</td>
+          
+        </tr>
+        <tr>
+          <td data-th="">POST</td>
+          <td data-th="">/users</td>
+        
+        </tr>
+        <tr>
+          <td data-th="">PATCH</td>
+          <td data-th="">/users</td>
+        </tr>
+        <tr>
+          <td data-th="">PUT</td>
+          <td data-th="">/users/:id</td>
+        </tr>
+         <tr>
+          <td data-th="">DELETE</td>
+          <td data-th="">/users/:id</td>
+        </tr>
+         <tr>
+          <td data-th="">GET</td>
+          <td data-th="">/users/:id/cart</td>
+        </tr>
+        <tr>
+          <td data-th="">POST</td>
+          <td data-th="">/users/:id/cart</td>
+        </tr>
+        <tr>
+          <td data-th="">PUT</td>
+          <td data-th="">/users/:id/cart</td>
+        </tr>
+        <tr>
+          <td data-th="">DELETE</td>
+          <td data-th="">/users/:id/cart</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-3">
+   
+    <table>
+      <tbody>
+        <tr>
+          <th>Products :</th>
+         
+        </tr>
+        <tr>
+          <td data-th="">GET</td>
+          <td data-th="">/products</td>
+  
+        </tr>
+         <tr>
+          <td data-th="">GET</td>
+          <td data-th="">/products/:id</td>
+  
+        </tr>
+         <tr>
+          <td data-th="">POST</td>
+          <td data-th="">/products</td>
+  
+        </tr>
+         <tr>
+          <td data-th="">PUT</td>
+          <td data-th="">/products/:id</td>
+  
+        </tr>
+         <tr>
+          <td data-th="">DELETE</td>
+          <td data-th="">/products/:id</td>
+  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   </body>
-  <script src="./fetch.js"></script>
 </html>
