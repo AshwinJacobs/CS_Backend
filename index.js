@@ -29,6 +29,8 @@ app.use(
 // GET '/' is always what will be displayed on the home page of your application
 // app.get("/landing.html", express.static(__dirname + "/landing.html"));
 app.get("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.sendFile(__dirname + "/index");
 });
 
