@@ -7,6 +7,7 @@ const cors = require("cors"); // Used to prevent errors when working locally
 const productsRoute = require("./routes/productsRoute");
 const userRoute = require("./routes/userRoute");
 const router = require("./routes/userRoute");
+const cartRoute = require("./routes/cartRoute");
 const con = require("./lib/dbConnection");
 
 // Configure Server
@@ -25,6 +26,7 @@ app.use(
 {
   credentials: "include";
 }
+
 // This is where we check URLs and Request methods to create functionality
 // GET '/' is always what will be displayed on the home page of your application
 // app.get("/landing.html", express.static(__dirname + "/landing.html"));
@@ -36,6 +38,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRoute);
 app.use("/products", productsRoute);
+app.use(cartRoute);
 // Set up server to start listening for requests
 app.listen(app.get("port"), () => {
   console.log(`http://localhost:${app.get("port")}`);
