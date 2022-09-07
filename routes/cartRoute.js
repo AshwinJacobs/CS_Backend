@@ -8,15 +8,15 @@ const middleware = require("../middleware/auth");
 router.get("/users/:id/cart", middleware, (req, res) => {
   try {
     const strQuery = "SELECT cart FROM users WHERE user_id = ?";
-    con.query(strQuery, [req.user.user_id], (err, results) => {
+    con.query(strQuery, [req.params.id], (err, results) => {
       if (err) throw err;
       (function Check(a, b) {
         a = parseInt(req.user.user_id);
         b = parseInt(req.params.id);
         if (a === b) {
           //   res.send(results[0].cart);
-          console.log(results[0]);
-          res.json(results[0].cart);
+          //   console.log(results[0]);
+          res.json(JSON.parse(results[0].cart));
         } else {
           res.json({
             a,
@@ -132,7 +132,7 @@ router.delete("/users/:id/cart", middleware, (req, res) => {
   const strQry = `
     UPDATE users
       SET cart = null
-      WHERE (id = ?);
+      WHERE (user_id = ?);
       `;
   con.query(strQry, [req.user.user_id], (err, data, fields) => {
     if (err) throw err;
